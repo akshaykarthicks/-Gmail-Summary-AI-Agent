@@ -1,52 +1,58 @@
-📬 Gmail Summary Automation with n8n and Google Gemini
+## 📬 Gmail Summary Automation with n8n and Google Gemini
+
 This workflow automates the process of summarizing recent Gmail messages using Google's Gemini language model via n8n.
 
-🔁 Workflow Name
-My workflow 2
+### 🔁 Workflow Name
 
-🧩 Workflow Overview
-⏰ Schedule Trigger
-Executes daily at 8 PM.
+**My workflow 2**
 
-📥 Gmail Node
-Retrieves the latest 10 email snippets from your Gmail inbox.
+---
 
-📊 Aggregate Node
-Extracts and prepares the snippet fields from the emails.
+### 🧩 Workflow Overview
 
-🧠 Summary Agent
-Uses Google Gemini (PaLM) via LangChain to generate a concise summary of the email snippets.
+1. **⏰ Schedule Trigger**
+   Executes daily at 8 PM.
 
-📝 Gmail Draft Node
-Sends the generated summary as a draft email with the subject "Your Gmail Summary".
+2. **📥 Gmail Node**
+   Retrieves the latest 10 email snippets from your Gmail inbox.
 
-⚙️ Technologies Used
-n8n
+3. **📊 Aggregate Node**
+   Extracts and prepares the `snippet` fields from the emails.
 
-Gmail API (OAuth2)
+4. **🧠 Summary Agent**
+   Uses Google Gemini (PaLM) via LangChain to generate a concise summary of the email snippets.
 
-LangChain Agent with Google Gemini
+5. **📝 Gmail Draft Node**
+   Sends the generated summary as a draft email with the subject "Your Gmail Summary".
 
-Google Gemini (PaLM)
+---
 
-Aggregate Node for data shaping
+### ⚙️ Technologies Used
 
-🧪 Setup Instructions
-Clone or import the workflow into your n8n instance.
+* **n8n**
+* **Gmail API (OAuth2)**
+* **LangChain Agent with Google Gemini**
+* **Google Gemini (PaLM)**
+* **Aggregate Node for data shaping**
 
-Configure the following credentials:
+---
 
-gmailOAuth2: Link to your Gmail account.
+### 🧪 Setup Instructions
 
-googlePalmApi: Access to Gemini API.
+1. Clone or import the workflow into your **n8n** instance.
+2. Configure the following credentials:
 
-Ensure the schedule is correct (default is 8 PM).
+   * `gmailOAuth2`: Link to your Gmail account.
+   * `googlePalmApi`: Access to Gemini API.
+3. Ensure the schedule is correct (default is 8 PM).
+4. Activate the workflow.
 
-Activate the workflow.
+---
 
-🛡️ Notes
-Ensure required Gmail and Gemini API credentials are properly set up and authorized in your n8n instance.
+### 🛡️ Notes
 
-This workflow creates drafts and does not auto-send emails.
+* Ensure required Gmail and Gemini API credentials are properly set up and authorized in your n8n instance.
+* This workflow creates **drafts** and does not auto-send emails.
+* Modify the prompt or output format if needed to suit your email summarization style.
 
-Modify the prompt or output format if needed to suit your email summarization style.
+
